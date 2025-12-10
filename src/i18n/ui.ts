@@ -1,231 +1,16 @@
-export const languages: Record<'fr' | 'en', { name: string; flag: string }> = {
-  fr: { name: 'Français', flag: 'fr' },
+export const languages: Record<'en', { name: string; flag: string }> = {
   en: { name: 'English', flag: 'us' },
 } as const;
 
-export const defaultLanguage = 'fr';
+export const defaultLanguage = 'en';
 
 export type LanguageCode = keyof typeof languages;
 
 export const ui = {
-  fr: {
-    projectsContent: {
-      sampleProject: {
-        title: 'Exemple de Projet',
-        description: "Ceci est un projet d'exemple pour le template.",
-        imageAltText: "Image placeholder pour le projet d'exemple",
-        categoryText: 'Application Web',
-        dateText: 'Janvier 2025',
-        detailedDescription:
-          "Une description plus détaillée de ce projet d'exemple, montrant comment structurer le contenu pour la page de détail du projet.",
-        keyFeatures: {
-          responsiveDesign: {
-            title: 'Design Adaptatif',
-            description: "Le projet s'adapte à toutes les tailles d'écran.",
-          },
-          contentManagement: {
-            title: 'Gestion de Contenu Facile',
-            description:
-              'Permet une gestion aisée du contenu via des fichiers Markdown ou un CMS.',
-          },
-        },
-        galleryImages: {
-          // sampleGalleryImage1: { // Si tu actives la galerie pour l'exemple
-          //   alt: "Texte alternatif pour l'image de galerie 1",
-          //   caption: "Légende pour l'image de galerie 1",
-          // },
-        },
-        challenges:
-          'Description des défis rencontrés lors de la création de ce projet exemple.',
-        learnings: 'Description des apprentissages tirés de ce projet exemple.',
-      },
-    },
-    skillsContent: {
-      frontendDevelopment: {
-        title: 'Développement Frontend',
-        description:
-          "Création d'interfaces utilisateur interactives et performantes.",
-      },
-      backendDevelopment: {
-        title: 'Développement Backend',
-        description: "Construction de logiques serveur robustes et d'API.",
-      },
-      uiUxDesign: {
-        title: 'Design UI/UX',
-        description:
-          "Conception d'expériences utilisateur intuitives et esthétiques.",
-      },
-      devOps: {
-        title: 'DevOps',
-        description:
-          'Automatisation des processus de développement et de déploiement.',
-      },
-    },
-    site: {
-      title: 'Mon Super Template',
-      description:
-        'Un template Astro moderne et performant pour démarrer votre projet.',
-    },
-    nav: {
-      home: 'Accueil',
-      blog: 'Blog',
-      contact: 'Contact',
-      projects: 'Projets',
-      tips: 'Astuces',
-    },
-    footer: {
-      rights: 'Tous droits réservés.',
-    },
-    homePage: {
-      pageTitle: 'Accueil |  Développeur FullStack',
-      pageDescription:
-        "Bienvenue sur le portfolio de YOUR_NAME, développeur FullStack passionné par la création d'expériences web innovantes.",
-      heroGreeting: "Salut, c'est YOUR_NAME",
-      heroSubtitlePart1: 'Développeur FullStack',
-      heroSubtitlePart2: 'Passionné UI/UX',
-      heroIntroduction: 'Ajouter une introduction ici.',
-      heroViewWorkButton: 'Mes réalisations',
-      heroContactButton: 'Me contacter',
-      heroImageAlt:
-        'Illustration représentant YOUR_NAME ou un concept de développement',
-      featuredProjectsTitle: '3 derniers projets',
-      featuredProjectsDescription:
-        "Voici quelques projets sur lesquels j'ai récemment travaillé. N'hésitez pas à les explorer !",
-      projectCardViewProject: 'Voir le projet',
-      projectCardViewCode: 'Voir le code',
-      imageNotAvailable: 'Image bientôt disponible',
-      mySkillsTitle: 'Mes Compétences',
-      mySkillsDescription:
-        "Explorez l'expertise et les capacités qui définissent mon travail et ma passion.",
-    },
-    blogPage: {
-      pageTitle: 'Mon Blog Technique',
-      pageDescription:
-        "Articles et réflexions sur le développement web, l'architecture logicielle, et les nouvelles technologies.",
-      title: 'Mon Blog Technique',
-      description:
-        "Articles et réflexions sur le développement web, l'architecture logicielle, et les nouvelles technologies.",
-      comingSoon:
-        'Les articles de blog apparaîtront ici bientôt. Revenez plus tard !',
-      heroImageAlt: "Image de couverture pour l'article : ",
-      publishedOn: 'Publié le : ',
-      readMore: 'Lire la suite',
-      readingTimeSuffix: 'min de lecture',
-      searchPlaceholder: 'Rechercher des articles...',
-      filterByTagButtonLabel: 'Filtrer par tag',
-      noTagFound: 'Aucun tag trouvé.',
-      selectTagCommandPlaceholder: 'Rechercher un tag...',
-      allTagsLabel: 'Tous les tags',
-      noPostsFound: 'Aucun article trouvé.',
-    },
-    blogPost: {
-      publishedOn: 'Publié le : ',
-      updatedOn: 'Mis à jour le : ',
-      heroImageAlt: "Image de couverture pour l'article : ",
-      backToList: 'Retour à la liste des articles',
-      readingTimeSuffix: 'min de lecture',
-      relatedPostsTitle: 'Je te recommande aussi :',
-      readMore: 'Lire la suite',
-      editOnGithub: 'Proposer une modification sur GitHub',
-    },
-    toc: {
-      title: "Sommaire de l'article",
-    },
-    contactPage: {
-      pageTitle: 'Me Contacter',
-      pageDescription:
-        "Discutons de ton projet, d'une collaboration potentielle, ou simplement pour échanger sur la tech !",
-      title: 'Me Contacter',
-      description:
-        "Discutons de ton projet, d'une collaboration potentielle, ou simplement pour échanger sur la tech !",
-
-      formTitle: 'Envoyer un message',
-      firstNameLabel: 'Prénom',
-      lastNameLabel: 'Nom',
-      emailLabel: 'Email',
-      messageLabel: 'Message',
-      sendButtonLabel: 'Envoyer',
-      firstNamePlaceholder: 'Ton prénom',
-
-      lastNamePlaceholder: 'Ton nom de famille',
-      emailPlaceholder: 'Ton adresse e-mail',
-      messagePlaceholder: 'Ton message ici...',
-      calendarTitle: 'Planifier un RDV',
-      calendarDescription:
-        'Tu préfères discuter de vive voix ? Réservez directement un créneau dans mon agenda.',
-      calendarButtonLabel: 'Voir mes disponibilités',
-      calendarLinkLabel: 'Voir mon agenda',
-      calendarPlaceHolder:
-        "L'intégration avec Google Calendar se fera bientôt...",
-      orSeparatorText: 'OU',
-      toastSuccessMessageSent: 'Message envoyé avec succès !',
-      toastErrorFailedToSend: "Échec de l'envoi du message.",
-      toastErrorUnexpected: "Une erreur inattendue s'est produite.",
-      toastErrorDetails: "Détails de l'erreur:",
-      toastErrorValidationFailed: 'Validation du formulaire échouée.',
-    },
-    projectDetailPage: {
-      backToProjects: 'Retour aux Projets',
-      categoryLabel: 'Catégorie :',
-      dateLabel: 'Date :',
-      aboutTitle: 'À propos de ce projet',
-      keyFeaturesTitle: 'Fonctionnalités Clés',
-      galleryTitle: 'Galerie',
-      challengesTitle: 'Défis Rencontrés',
-      learningsTitle: 'Leçons Apprises',
-      visitProjectButton: 'Visiter le Projet',
-      viewCodeButton: 'Voir le Code',
-    },
-    projectsPage: {
-      title: 'Mes Projets',
-      metaTitle: 'Mes Projets | Portfolio',
-      metaDescription: 'Découvrez tous les projets.',
-      noProjects: 'Aucun projet à afficher pour le moment.',
-      noProjectsDescription:
-        "Il semble que vous n'ayez pas encore de projets à afficher.",
-    },
-    notFoundPage: {
-      pageTitle: 'Page Non Trouvée',
-      title: 'Oups ! Page Non Trouvée',
-      message:
-        "Désolé, la page que vous recherchez ne semble pas exister. Vérifiez l'URL ou retournez à la page d'accueil.",
-      homeLink: "Retourner à l'Accueil",
-    },
-
-    tipsPage: {
-      metaTitle: 'Astuces de Développement',
-      metaDescription:
-        'Découvrez des astuces et conseils rapides sur le développement web et la cloud computing.',
-      description:
-        'Découvrez des astuces et conseils rapides sur le développement web et la cloud computing.',
-      title: 'Nos Dernières Astuces',
-      noTips: 'Aucune astuce à afficher pour le moment.',
-      readTip: "Lire l'astuce",
-      backToList: 'Retour à la liste des astuces',
-      featuredTips: 'Astuces recommandées',
-      allTips: 'Toutes les astuces',
-      tipsAvailable: 'astuces disponibles',
-      tipAvailable: 'astuce disponible',
-      editOnGithub: 'Modifier sur GitHub',
-    },
-    zodErrors: {
-      // Common errors
-      invalid_type: 'Type invalide.',
-      invalid_type_received_undefined: 'Ce champ est requis.', // For required fields (fallback)
-      required_field_custom: 'Le champ {fieldName} est requis.',
-      // String errors
-      too_small_string_minimum: 'Doit contenir au moins {minimum} caractères.',
-      too_big_string_maximum: 'Ne doit pas dépasser {maximum} caractères.',
-      invalid_string_email: 'Adresse e-mail invalide.',
-      invalid_string_url: 'URL invalide.',
-      invalid_string_uuid: 'UUID invalide.',
-      // You can add more specific messages as needed
-    },
-  },
   en: {
     projectsContent: {
       sampleProject: {
-        title: 'Sample Project',
+        title: 'Project 1',
         description: 'This is a sample project for the template.',
         imageAltText: 'Placeholder image for the sample project',
         categoryText: 'Web Application',
@@ -243,17 +28,58 @@ export const ui = {
               'Allows for easy content management via Markdown files or a CMS.',
           },
         },
-        galleryImages: {
-          // sampleGalleryImage1: { // If you enable gallery for the example
-          //   alt: 'Alt text for gallery image 1',
-          //   caption: 'Caption for gallery image 1',
-          // },
-        },
+        galleryImages: {},
         challenges:
           'Description of challenges encountered while creating this sample project.',
         learnings: 'Description of learnings from this sample project.',
       },
+
+      project2: {
+        title: 'Project 2',
+        description: 'This is my CAD project.',
+        imageAltText: 'CAD preview image',
+        categoryText: 'CAD Project',
+        dateText: 'February 2025',
+        detailedDescription: 'This project showcases CAD work...',
+        keyFeatures: {
+          responsiveDesign: {
+            title: 'Responsive Design',
+            description: 'Reused text.',
+          },
+          contentManagement: {
+            title: 'Content Management',
+            description: 'Reused text.',
+          },
+        },
+        galleryImages: {},
+        challenges: 'Challenges for project 2.',
+        learnings: 'Learnings for project 2.',
+      },
+
+      project3: {
+        title: 'Made a Hello World Script Once',
+        description: 'This is a tiny coding project.',
+        imageAltText: 'Programming preview image',
+        categoryText: 'Coding Project',
+        dateText: 'March 2025',
+        detailedDescription:
+          'A humorous entry showing that even small projects count.',
+        keyFeatures: {
+          responsiveDesign: {
+            title: 'Not Responsive',
+            description: 'But still charming.',
+          },
+          contentManagement: {
+            title: 'Content Management',
+            description: 'Not applicable, but included for structure.',
+          },
+        },
+        galleryImages: {},
+        challenges: 'Challenges for project 3.',
+        learnings: 'Learnings for project 3.',
+      },
     },
+
     skillsContent: {
       frontendDevelopment: {
         title: 'Frontend Development',
@@ -273,11 +99,13 @@ export const ui = {
         description: 'Automating development and deployment processes.',
       },
     },
+
     site: {
       title: 'My Awesome Template',
       description:
         'A modern and performant Astro template to kickstart your project.',
     },
+
     nav: {
       home: 'Home',
       blog: 'Blog',
@@ -285,9 +113,11 @@ export const ui = {
       projects: 'Projects',
       tips: 'Tips',
     },
+
     footer: {
       rights: 'All rights reserved.',
     },
+
     homePage: {
       pageTitle: 'Home | YOUR_NAME - FullStack Developer',
       pageDescription:
@@ -310,6 +140,7 @@ export const ui = {
       mySkillsDescription:
         'Explore the expertise and abilities that define my work and passion.',
     },
+
     blogPage: {
       pageTitle: 'My Technical Blog',
       pageDescription:
@@ -329,6 +160,7 @@ export const ui = {
       allTagsLabel: 'All tags',
       noPostsFound: 'No posts found.',
     },
+
     blogPost: {
       publishedOn: 'Published on: ',
       updatedOn: 'Updated on: ',
@@ -338,14 +170,15 @@ export const ui = {
       relatedPostsTitle: 'Continue Reading',
       readMore: 'Read more',
     },
+
     toc: {
       title: 'Table of Contents',
     },
+
     contactPage: {
       pageTitle: 'Contact Me',
       pageDescription:
         "Let's discuss your project, a potential collaboration, or just chat about tech!",
-
       title: 'Contact Me',
       description:
         "Let's discuss your project, a potential collaboration, or just chat about tech!",
@@ -373,6 +206,7 @@ export const ui = {
       toastErrorDetails: 'Error details:',
       toastErrorValidationFailed: 'Form validation failed.',
     },
+
     projectDetailPage: {
       backToProjects: 'Back to Projects',
       categoryLabel: 'Category:',
@@ -385,6 +219,7 @@ export const ui = {
       visitProjectButton: 'Visit Project',
       viewCodeButton: 'View Code',
     },
+
     projectsPage: {
       title: 'My Projects',
       metaTitle: "My Projects | YOUR_NAME's Portfolio",
@@ -393,6 +228,7 @@ export const ui = {
       noProjectsDescription:
         "It seems that you don't have any projects to display at the moment.",
     },
+
     notFoundPage: {
       pageTitle: 'Page Not Found',
       title: 'Oops! Page Not Found',
@@ -417,18 +253,16 @@ export const ui = {
       tipAvailable: 'tip available',
       editOnGithub: 'Edit on GitHub',
     },
+
     zodErrors: {
-      // Common errors
       invalid_type: 'Invalid type.',
-      invalid_type_received_undefined: 'This field is required.', // For required fields (fallback)
+      invalid_type_received_undefined: 'This field is required.',
       required_field_custom: 'The {fieldName} field is required.',
-      // String errors
       too_small_string_minimum: 'Must be at least {minimum} characters long.',
       too_big_string_maximum: 'Must be no more than {maximum} characters long.',
       invalid_string_email: 'Invalid email address.',
       invalid_string_url: 'Invalid URL.',
       invalid_string_uuid: 'Invalid UUID.',
-      // You can add more specific messages as needed
     },
   },
 } as const;
@@ -444,19 +278,14 @@ export function useTranslations<F extends FeatureType>(
 ) {
   const currentLanguage = lang || defaultLanguage;
 
-  // Get the available keys for this feature from the default language
   type AvailableKeys = keyof UISchema[typeof defaultLanguage][F];
 
   return function t(key: AvailableKeys): string {
-    // Safely access the translation, falling back to default language if necessary
     const featureTranslations = ui[currentLanguage]?.[feature];
     if (featureTranslations && key in featureTranslations) {
-      return featureTranslations[
-        key as keyof typeof featureTranslations
-      ] as string;
+      return featureTranslations[key as keyof typeof featureTranslations] as string;
     }
 
-    // Fallback to default language
     return ui[defaultLanguage][feature][
       key as keyof (typeof ui)[typeof defaultLanguage][F]
     ] as string;

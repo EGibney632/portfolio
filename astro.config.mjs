@@ -21,7 +21,7 @@ console.log(`Using Mermaid strategy: ${mermaidStrategy}`);
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com', // IMPORTANT: Replace with your actual domain in production
+  site: 'https://eliasgibney.com', // IMPORTANT: Replace with your actual domain in production
   integrations: [
     react(),
     mdx({
@@ -45,8 +45,8 @@ export default defineConfig({
   ],
 
   i18n: {
-    locales: ['fr', 'en'],
-    defaultLocale: 'fr',
+    locales: ['en'],
+    defaultLocale: 'en',
     routing: {
       prefixDefaultLocale: false,
     },

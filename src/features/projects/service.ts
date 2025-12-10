@@ -37,6 +37,44 @@ const projectsListUnsorted: Array<ProjectData> = [
       { id: 'tailwindcss', name: 'TailwindCSS' },
     ],
   },
+
+////////////Project 2
+  {
+    id: 'project2',              // unique id
+    slug: 'project-2',           // this becomes /projects/project-2
+    imageUrl: placeholderImage,  // change later if you want
+    tags: ['CAD', 'Engineering'],
+    category: 'CAD Project',
+    date: '2025-02-01',
+    galleryImages: [],
+    keyFeatures: [
+      { id: 'responsiveDesign' },   // you can reuse these for now
+      { id: 'contentManagement' },
+    ],
+    technologiesUsed: [
+      { id: 'fusion360', name: 'Fusion 360' },
+      { id: 'solidworks', name: 'SolidWorks' },
+    ],
+  },
+
+////////////////
+{
+    id: 'project3',              // unique id
+    slug: 'project-3',           // this becomes /projects/project-2
+    imageUrl: placeholderImage,  // change later if you want
+    tags: ['CAD', 'Engineering'],
+    category: 'CAD Project',
+    date: '2025-05-01',
+    galleryImages: [],
+    keyFeatures: [
+      { id: 'EPICNESS' },   // you can reuse these for now
+      { id: 'contentManagement' },
+    ],
+    technologiesUsed: [
+      { id: 'fusion360', name: 'Fusion 360' },
+      { id: 'solidworks', name: 'SolidWorks' },
+    ],
+  },
 ];
 
 export const projectsList = [...projectsListUnsorted].sort((a, b) => {
