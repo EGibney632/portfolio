@@ -8,6 +8,7 @@ import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
 import rehypeMermaid from 'rehype-mermaid';
 
 import cloudflare from '@astrojs/cloudflare';
+import sitemap from '@astrojs/sitemap';
 
 // Detect environment
 const isProduction = process.env.NODE_ENV === 'production';
@@ -36,6 +37,7 @@ export default defineConfig({
         excludeLangs: ['mermaid'],
       },
     }),
+    sitemap(), // ✅ Added here
   ],
 
   i18n: {
